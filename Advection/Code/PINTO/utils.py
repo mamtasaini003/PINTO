@@ -5,9 +5,9 @@ import fcntl
 
 
 def read_h5_file(filename):
-    with open(filename, 'r') as f:
+    with open(filename, 'rb') as f:  # open in binary mode for locking
         fcntl.flock(f, fcntl.LOCK_SH)
-        with h5py.File(filename, 'r') as hf:
+        with h5py.File(f, 'r') as hf:
             data = hf['tensor'][:]
             x = hf['x-coordinate'][:]
             t = hf['t-coordinate'][:-1]

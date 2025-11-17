@@ -18,7 +18,7 @@ tf.random.set_seed(1234)
 
 # Data PreProcessing
 # getting data in required format from utils.py
-data_dir = None  # change the directory to your local directory where PDEBENCH Advection file presents.
+data_dir = "/home/mamta/work/PINTO/Advection/Code/PINTO/1D_Advection_Sols_beta01.hdf5"  
 
 # hyperparameters for data generation
 train_indices = np.arange(80)

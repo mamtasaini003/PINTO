@@ -14,6 +14,8 @@ from utils import read_h5_file
 np_config.enable_numpy_behavior()
 tf.random.set_seed(1234)
 
+WANDB_MODE="online"
+
 
 class PdeModel:
     def __init__(self, inputs, outputs, get_models, loss_fn, optimizer, metrics, parameters,
